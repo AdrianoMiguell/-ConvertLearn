@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ConvertLearn - Volume </title>
+    <link rel="stylesheet" href="../../src/css/styleG.css">
+    <link rel="stylesheet" href="../../src/css/classes.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="gradient-simple">
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+            </a>
+            <ul class="navOps">
+                <a href="../comprimento/convC.html#html#sesConvert">
+                    <li class="navOps-item text-light"> Comprimento </li>
+                </a>
+                <a href="../massa/convM.html#sesConvert">
+                    <li class="navOps-item text-light"> Massa </li>
+                </a>
+                <a href="../temperatura/convT.html#sesConvert">
+                    <li class="navOps-item text-light"> Temperatura </li>
+                </a>
+                <a href="../tempo/convTime.html#sesConvert">
+                    <li class="navOps-item text-light"> Tempo </li>
+                </a>
+                <a href="../index.html#others">
+                    <li class="navOps-item text-light"> Outros </li>
+                </a>
+                <a href="../sobreNos.html">
+                    <li class="navOps-item text-light"> Sobre nós </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-light">
+            <div class="sesInfo">
+                <h1> Unidades de Volume </h1>
+                <p>
+                    Podemos encontrar o volume de todos os sólidos geométricos. O volume corresponde à “capacidade”
+                    desse sólido. Entre as unidades temos : <br>
+                </p>
+                <br>
+                <ol class="sesInfo-list">
+                    <li>quilômetro cúbico(s) (km³) </li>
+                    <li> hectômetro cúbico(s) (hm³) </li>
+                    <li> decâmetro cúbico(s) (dam³) </li>
+                    <li> metro cúbico(s) (m³) </li>
+                    <li> decímetro cúbico(s) (dm³) </li>
+                    <li> centímetro cúbico(s) (cm³) </li>
+                    <li> milímetro cúbico(s) (mm³) </li>
+                </ol>
+                <br>
+                <p>Mais informações você pode encontrar no site: <a
+                        href="https://mundoeducacao.uol.com.br/matematica/formulas-para-calculo-volumes.htm">https://mundoeducacao.uol.com.br/matematica/formulas-para-calculo-volumes.htm</a>
+                </p>
+                <br>
+            </div>
+            <br>
+            <h2>
+                Convertendo unidades de volume
+            </h2>
+            <br>
+            <div id="sesConvert">
+                <div class="sesConvert-unid" style="align-items: center;">
+                    <label for="valorV"> Valor </label>
+                    <input type="number" placeholder="Digite aqui" id="valorV" onchange="convert()">
+                </div>
+                <div class="sesConvert-opts">
+                    <div>
+                        <label for="unidV"> Unidade de volume </label>
+                        <select name="unidV" id="unidV" onchange="convert()">
+                            <option value="-9"> milimetro cúbico(s) </option>
+                            <option value="-6"> centímetro cúbico(s) </option>
+                            <option value="-3"> decímetro cúbico(s) </option>
+                            <option value="0" selected> metro cúbico(s) </option>
+                            <option value="3"> decametro cúbico(s) </option>
+                            <option value="6"> hectômetro cúbico(s) </option>
+                            <option value="9"> quilômetro cúbico(s) </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="convV"> Converter para </label>
+                        <select name="convV" id="convV" onchange="convert()">
+                            <option value="-9"> milimetro cúbico(s) </option>
+                            <option value="-6"> centímetro cúbico(s) </option>
+                            <option value="-3"> decímetro cúbico(s) </option>
+                            <option value="0" selected> metro cúbico(s) </option>
+                            <option value="3"> decametro cúbico(s) </option>
+                            <option value="6"> hectômetro cúbico(s) </option>
+                            <option value="9"> quilômetro cúbico(s) </option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="sesConvert-unid flex-col-around gap-1">
+                    <span id="respV"> </span>
+                    <span id="calcV" class=""> </span>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-simple">
+        <span class="text-grad-light">Converter &amp; Learn</span>
+        <br>
+        <span class="text-grad-light">Converter &amp; Aprender</span>
+        <div>
+            <a href="https://www.instagram.com/adrianomiguell26" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-instagram" style="font-size: 20pt;"></i>
+                    <span> @adrianomiguell26 </span>
+                </div>
+            </a>
+            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-github" style="font-size: 20pt;"></i>
+                    <span> @AdrianoMiguell </span>
+                </div>
+            </a>
+        </div>
+
+        <span class="text-grad-light"> Muito &#10084; obrigado! </span>
+    </footer>
+
+    <script src="./convV.js"></script>
+</body>
+
+</html>

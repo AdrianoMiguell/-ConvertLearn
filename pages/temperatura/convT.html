@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ConverterLearn - Temperatura </title>
+    <link rel="stylesheet" href="../../src/css/styleG.css">
+    <link rel="stylesheet" href="../../src/css/classes.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="gradient-simple">
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+            </a>
+            <ul class="navOps">
+                <a href="../comprimento/convC.html#html#sesConvert">
+                    <li class="navOps-item text-light"> Comprimento </li>
+                </a>
+                <a href="../massa/convM.html#sesConvert">
+                    <li class="navOps-item text-light"> Massa </li>
+                </a>
+                <a href="../temperatura/convT.html#sesConvert">
+                    <li class="navOps-item text-light"> Temperatura </li>
+                </a>
+                <a href="../tempo/convTime.html#sesConvert">
+                    <li class="navOps-item text-light"> Tempo </li>
+                </a>
+                <a href="../index.html#others">
+                    <li class="navOps-item text-light"> Outros </li>
+                </a>
+                <a href="../sobreNos.html">
+                    <li class="navOps-item text-light"> Sobre nós </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="text-light">
+            <div class="sesInfo">
+                <h1> Escalas de temperatura </h1>
+                <p> As escalas de temperatura são três: Kelvin (K), Celsius(C) e Fahrenheit (F). Abaixo trazemos uma
+                    breve explicação sobre cada uma delas. </p>
+                <br>
+                <ul class="sesInfo-list">
+                    <li> <strong>Fahrenheit :</strong> Escala termométrica de símbolo F, no qual 32° F é o ponto de
+                        congelamento da água e
+                        212° F é o ponto de ebulição da água.</li> <br>
+                    <li> <strong>Celsius :</strong> Escala de temperatura, símbolo C, no qual 0° C é o ponto de
+                        congelamento da água e 100°
+                        C é o ponto de ebulição da água.</li> <br>
+                    <li> <strong>Kelvin :</strong> Escala de temperatura absoluta ou escala termodinâmica, cujo símbolo
+                        é K, no qual o
+                        ponto triplo da água tem o valor de 273,16 K.</li>
+                </ul>
+            </div>
+
+            <br>
+            <h2> Convertendo temperaturas </h2>
+            <br>
+
+            <div id="sesConvert">
+                <div class="sesConvert-unid" style="align-items: center;">
+                    <label for="valorT"> Valor </label>
+                    <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
+                </div>
+                <div class="sesConvert-opts">
+                    <div>
+                        <label for="unidT"> Escala de temperatura </label>
+                        <select name="unidT" id="unidT" onchange="convert()">
+                            <option value="" selected> --- escolha --- </option>
+                            <option value="c">celsius</option>
+                            <option value="k">kelvin</option>
+                            <option value="f">fahrenheit</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="convT"> Converter para</label>
+                        <select name="convT" id="convT" onchange="convert()">
+                            <option value="" selected> --- escolha --- </option>
+                            <option value="k">kelvin</option>
+                            <option value="c">celsius</option>
+                            <option value="f">fahrenheit</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="sesConvert-unid flex-col-around gap-1">
+                    <span id="respT"> </span>
+                    <span id="calcT" class=""> </span>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-simple">
+        <span class="text-grad-light">Converter &amp; Learn</span>
+        <br>
+        <span class="text-grad-light">Converter &amp; Aprender</span>
+        <div>
+            <a href="https://www.instagram.com/adrianomiguell26" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-instagram" style="font-size: 20pt;"></i>
+                    <span> @adrianomiguell26 </span>
+                </div>
+            </a>
+            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-github" style="font-size: 20pt;"></i>
+                    <span> @AdrianoMiguell </span>
+                </div>
+            </a>
+        </div>
+
+        <span class="text-grad-light"> Muito &#10084; obrigado! </span>
+    </footer>
+
+    <script src="./convT.js"></script>
+</body>
+
+</html>

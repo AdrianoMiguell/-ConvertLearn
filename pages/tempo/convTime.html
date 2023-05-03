@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ConverterLearn - Tempo </title>
+    <link rel="stylesheet" href="../../src/css/styleG.css">
+    <link rel="stylesheet" href="../../src/css/classes.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="gradient-simple">
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+            </a>
+            <ul class="navOps">
+                <a href="../comprimento/convC.html#html#sesConvert">
+                    <li class="navOps-item text-light"> Comprimento </li>
+                </a>
+                <a href="../massa/convM.html#sesConvert">
+                    <li class="navOps-item text-light"> Massa </li>
+                </a>
+                <a href="../temperatura/convT.html#sesConvert">
+                    <li class="navOps-item text-light"> Temperatura </li>
+                </a>
+                <a href="../tempo/convTime.html#sesConvert">
+                    <li class="navOps-item text-light"> Tempo </li>
+                </a>
+                <a href="../index.html#others">
+                    <li class="navOps-item text-light"> Outros </li>
+                </a>
+                <a href="../sobreNos.html">
+                    <li class="navOps-item text-light"> Sobre nós </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="text-light">
+            <div class="sesInfo">
+                <h1 style="font-size: 15pt;"> Unidades de medida de tempo </h1>
+                <p> As unidades de tempo são muito importantes no cotidiano de todo ser humano. Com elas podemos dizer
+                    em quantos segundos tomamos banho, ou em quantos minutos escovamos os dentes, e vice-versa. <br>
+                    Transformar assim, mutuamente essas medidas, é uma boa jogada para adiantarmos o nosso entendimento
+                    de tempo, quando realizamos pequenas atividades.
+                </p>
+                <ol class="sesInfo-list flex-around">
+                    <div>
+                        <li> milissegundo </li>
+                        <li> segundo </li>
+                        <li> minuto </li>
+                        <li> hora </li>
+                        <li> dia </li>
+                    </div>
+                    <div>
+                        <li> semana </li>
+                        <li> mês </li>
+                        <li> ano </li>
+                        <li> continua ... </li>
+                    </div>
+                </ol>
+            </div>
+            <br>
+            <h2>
+                Convertendo unidades de tempo
+            </h2>
+            <div id="sesConvert">
+                <div class="sesConvert-unid" style="align-items: center;">
+                    <label for="valorT" id="labelT"> Valor : </label>
+                    <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
+                </div>
+                <div class="sesConvert-opts">
+                    <div>
+                        <label for="unidT"> Unidade de medida </label>
+                        <select name="unidT" id="unidT" onchange="convert()">
+                            <option value=""> --- escolha --- </option>
+                            <option value="mm" selected> milissegundo(s) </option>
+                            <option value="s"> segundo(s) </option>
+                            <option value="m"> minuto(s) </option>
+                            <option value="h"> hora(s) </option>
+                            <option value="d"> dia(s) </option>
+                            <option value="w"> semana(s) </option>
+                            <option value="mes"> mês(s) </option>
+                            <option value="y"> ano(s) </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="convT"> Converter para</label>
+                        <select name="convT" id="convT" onchange="convert()">
+                            <option value=""> --- escolha --- </option>
+                            <option value="mm" selected> milissegundo(s) </option>
+                            <option value="s"> segundo(s) </option>
+                            <option value="m"> minuto(s) </option>
+                            <option value="h"> hora(s) </option>
+                            <option value="d"> dia(s) </option>
+                            <option value="w"> semana(s) </option>
+                            <option value="mes"> mês(s) </option>
+                            <option value="y"> ano(s) </option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="sesConvert-unid flex-col-around gap-1" style="user-select: text;">
+                    <span id="respT"> </span>
+                    <span id="calcT" class=""> </span>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-simple">
+        <span class="text-grad-light">Converter &amp; Learn</span>
+        <br>
+        <span class="text-grad-light">Converter &amp; Aprender</span>
+        <div>
+            <a href="https://www.instagram.com/adrianomiguell26" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-instagram" style="font-size: 20pt;"></i>
+                    <span> @adrianomiguell26 </span>
+                </div>
+            </a>
+            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-github" style="font-size: 20pt;"></i>
+                    <span> @AdrianoMiguell </span>
+                </div>
+            </a>
+        </div>
+
+        <span class="text-grad-light"> Muito &#10084; obrigado! </span>
+    </footer>
+
+    <script src="./convTime.js"></script>
+</body>
+
+</html>

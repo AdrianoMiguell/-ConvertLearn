@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ConverterLearn - Temperatura </title>
+    <link rel="stylesheet" href="../../src/css/styleG.css">
+    <link rel="stylesheet" href="../../src/css/classes.css">
+
+    <style>
+        .sesInfo-list {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="gradient-simple">
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+            </a>
+            <ul class="navOps">
+                <a href="../comprimento/convC.html#html#sesConvert">
+                    <li class="navOps-item text-light"> Comprimento </li>
+                </a>
+                <a href="../massa/convM.html#sesConvert">
+                    <li class="navOps-item text-light"> Massa </li>
+                </a>
+                <a href="../temperatura/convT.html#sesConvert">
+                    <li class="navOps-item text-light"> Temperatura </li>
+                </a>
+                <a href="../tempo/convTime.html#sesConvert">
+                    <li class="navOps-item text-light"> Tempo </li>
+                </a>
+                <a href="../index.html#others">
+                    <li class="navOps-item text-light"> Outros </li>
+                </a>
+                <a href="../sobreNos.html">
+                    <li class="navOps-item text-light"> Sobre nós </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-light">
+            <div class="sesInfo">
+                <h1> Unidades de medida para dados de armazenamento </h1>
+                <p>
+                    Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como forma de
+                    facilitar a nossa compreensão, são representados apenas por 1 ou 0, razão pela qual essa abordagem é
+                    chamada de sistema binário. Para o armazenamento de dados, são usados unidades decimais e binárias
+                    de medida para expressar o tamanho desses dados de armazenamento.</p>
+                <p>
+                    Unidades decimais como kilobyte (KB), megabyte (MB) e gigabyte (GB) são comumente usadas para
+                    expressar o tamanho dos dados. Unidades binárias de medida incluem kibibyte (KiB), mebibyte (MiB) e
+                    gibibyte (GiB).
+                </p>
+                <p> Entre as unidades de armazenamento, além das já mencionadas, temos: </p>
+                <br>
+                <ol class="sesInfo-list flex-around">
+                    <div>
+                        <h2>escala binária</h2>
+                        <li> bit </li>
+                        <li>kilobit</li>
+                        <li>megabit</li>
+                        <li>gigabit</li>
+                        <li>terabit</li>
+                        <li>petabit</li>
+                        <!-- <li>exabit</li>
+                        <li>zettabit</li>
+                        <li>yottabit</li> -->
+                    </div>
+                    <div>
+                        <h2>escala decimal</h2>
+                        <li> byte </li>
+                        <li> kilobyte </li>
+                        <li> megabyte </li>
+                        <li> gigabyte </li>
+                        <li> terabyte </li>
+                        <li> petabyte </li>
+                        <!-- <li> exabyte </li>
+                        <li> zettabyte </li>
+                        <li> yottabyte </li> -->
+                    </div>
+                </ol>
+            </div>
+
+            <br>
+
+            <div id="sesConvert">
+                <h2>
+                    Convertendo dados binários
+                </h2>
+                <div class="sesConvert-unid" style="align-items: center;">
+                    <label for="valorB"> Valor </label>
+                    <input type="number" placeholder="Digite aqui" id="valorB" onchange="convert()">
+                </div>
+                <div class="sesConvert-opts">
+                    <div>
+                        <label for="unidB"> Medida do valor </label>
+                        <select name="unidB" id="unidB" onchange="convert()">
+                            <optgroup> unidade binaria </optgroup>
+                            <option value="bit">bit</option>
+                            <option value="kbit">kilobit</option>
+                            <option value="mbit">megabit</option>
+                            <option value="gbit">gigabit</option>
+                            <option value="tbit">terabit</option>
+                            <option value="pbit">petabit</option>
+
+                            <optgroup> unidade decimal </optgroup>
+                            <option value="Byte" selected>byte</option>
+                            <option value="kByte">kilobyte</option>
+                            <option value="mByte">megabyte</option>
+                            <option value="gByte">gigabyte</option>
+                            <option value="tByte">terabyte</option>
+                            <option value="pByte">petabyte</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="convB"> Converter para </label>
+                        <select name="convB" id="convB" onchange="convert()">
+                            <optgroup> unidade binaria </optgroup>
+                            <option value="bit" selected>bit</option>
+                            <option value="kbit">kilobit</option>
+                            <option value="mbit">megabit</option>
+                            <option value="gbit">gigabit</option>
+                            <option value="tbit">terabit</option>
+                            <option value="pbit">petabit</option>
+
+                            <optgroup> unidade decimal </optgroup>
+                            <option value="Byte">byte</option>
+                            <option value="kByte">kilobyte</option>
+                            <option value="mByte">megabyte</option>
+                            <option value="gByte">gigabyte</option>
+                            <option value="tByte">terabyte</option>
+                            <option value="pByte">petabyte</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="sesConvert-unid flex-col-around gap-1">
+                    <span id="respB"> </span>
+                    <span id="calcB" class=""> </span>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-simple">
+        <span class="text-grad-light">Converter &amp; Learn</span>
+        <br>
+        <span class="text-grad-light">Converter &amp; Aprender</span>
+        <div>
+            <a href="https://www.instagram.com/adrianomiguell26" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-instagram" style="font-size: 20pt;"></i>
+                    <span> @adrianomiguell26 </span>
+                </div>
+            </a>
+            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-github" style="font-size: 20pt;"></i>
+                    <span> @AdrianoMiguell </span>
+                </div>
+            </a>
+        </div>
+
+        <span class="text-grad-light"> Muito &#10084; obrigado! </span>
+    </footer>
+
+    <script src="./convB.js"></script>
+</body>
+
+</html>
